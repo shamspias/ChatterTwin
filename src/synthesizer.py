@@ -37,8 +37,7 @@ class ChatterboxSynthesizer:
             wav = self.model.generate(
                 text,
                 audio_prompt_path=audio_prompt_path,
-                exaggeration=exaggeration,
-                cfg=cfg,
+                exaggeration=exaggeration
             )
             ta.save(str(output_path), wav, self.model.sr)
             print(f"Saved: {output_path}")
